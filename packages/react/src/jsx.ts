@@ -31,8 +31,8 @@ export const jsx = (type: ElementType, config: any, ...maybeChildren: any) => {
 	const props: Props = {};
 	let ref: Ref = null;
 
-	for (const prop in props) {
-		const val = props[prop];
+	for (const prop in config) {
+		const val = config[prop];
 		if (prop === 'key') {
 			if (val !== undefined) {
 				key = val;
